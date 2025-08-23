@@ -1,0 +1,59 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+env/
+.shopenv/
+
+# VSCode settings/extensions
+.vscode/
+.config/Code/
+.config/google-chrome/
+
+# Editor directories and files
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Downloads and installers
+Downloads/
+*.exe
+*.msi
+*.dmg
+
+# Large language model and optimization files
+optimization_guide_model_store/
+*.bin
+
+# Database
+*.sqlite3
+
+# Migrations
+**/migrations/*.pyc
+**/migrations/__pycache__/
+
+# Node modules (if using Node.js)
+node_modules/
+
+# Python egg files
+*.egg-info/
+dist/
+build/
+
+# Log files
+*.log
+
+# Secret files
+*.env
+.env.*
+
+# Large binaries (add specific files that triggered errors)
+.vscode/extensions/ms-vscode.cpptools-1.23.5-linux-x64/
+.vscode/extensions/ms-vscode.cpptools-1.23.5-linux-x64/LLVM/bin/clang-tidy
+.config/Code/CachedExtensionVSIXs/ms-vscode.cpptools-1.23.5-linux-x64
+Downloads/codeblocks-20.03mingw-setup.exe
