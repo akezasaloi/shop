@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="py-12">
+  <div class="max-w-6xl mx-auto px-4">
+    <h1 class="text-4xl font-bold text-yellow-600 text-center mb-12 tracking-wide">Featured Products</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+      {% for product in products %}
+      <div class="flex flex-col items-center bg-transparent">
+        <a href="{% url 'product_details' product.id %}" class="w-full flex flex-col items-center group">
+          {% if product.image %}
+            <img src="{{ product.image }}" alt="{{ product.name }}"
+                 class="w-48 h-48 object-contain rounded-xl shadow mb-4 bg-white border-2 border-gray-100 group-hover:scale-105 transform transition" />
+          {% else %}
+            <div class="w-48 h-48 flex items-center justify-center rounded-xl shadow mb-4 bg-gray-100 border-2 border-gray-200 text-gray-400">
+              No Image
+            </div>
+          {% endif %}
+          <span class="text-gray-500 text-sm mb-1">Fruits</span>
+          <h2 class="text-lg font-semibold text-green-700 mb-2">{{ product.name }}</h2>
+        </a>
+        <a href="{% url 'product_details' product.id %}" class="mt-2 px-6 py-1 border border-gray-400 rounded-full text-gray-700 hover:bg-yellow-50 transition">Read more</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
